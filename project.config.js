@@ -1,26 +1,42 @@
 module.exports = {
   port: 3912,
-  title: '钟乳石洞穴微环境巡测',
-  lede: '围绕洞穴、分区、样点和巡测路线记录微环境数据，发现异常后生成复查闭环。',
+  title: '洞穴沉积层样本链',
+  lede: '封存沉积层做年代采样：登记钻孔、层位、深度与封存时间，冷链发运核对、实验室双人接收，深度或封存时间更正后原结论失效重排，旧档可查。',
   tones: {
     '常规观察': 'ok',
     '正常': 'ok',
     '已复查': 'ok',
+    '在途': 'ok',
+    '已登记': 'ok',
+    '已接收': 'ok',
+    '合格': 'ok',
     '重点保护': 'warn',
     '异常待复查': 'bad',
+    '待重核': 'warn',
+    '待处理': 'bad',
+    '不合格': 'bad',
     '暂停开放': 'bad'
   },
   collections: {
     sites: { label: '样点档案' },
-    surveys: { label: '巡测记录' }
+    surveys: { label: '巡测记录' },
+    samples: { label: '沉积层样本' }
   },
   stats: [
+    { label: '样本总数', collection: 'samples' },
+    { label: '送检清单', collection: 'samples', filter: { field: 'status', value: '在途' } },
+    { label: '待处理', collection: 'samples', filter: { field: 'status', value: '待处理' } },
     { label: '样点', collection: 'sites' },
     { label: '重点保护', collection: 'sites', filter: { field: 'protectedStatus', value: '重点保护' } },
     { label: '巡测记录', collection: 'surveys' },
     { label: '待复查', collection: 'surveys', filter: { field: 'status', value: '异常待复查' } }
   ],
   views: [
+    {
+      id: 'samples',
+      label: '样本链',
+      type: 'sample-chain'
+    },
     {
       id: 'dashboard',
       label: '趋势看板',

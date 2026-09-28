@@ -39,5 +39,96 @@
         { "at": "2026-06-18T10:00:00.000Z", "action": "创建", "note": "CO2升高并有干扰痕迹" }
       ]
     }
+  ],
+  "samples": [
+    {
+      "id": "sample-seed-1",
+      "sampleCode": "S-2026-001",
+      "borehole": "ZK-01",
+      "horizon": "L2 钙华层",
+      "depth": 3.4,
+      "sealedAt": "2026-09-26T09:20",
+      "sealNo": "FB-3301",
+      "weight": 486,
+      "carrier": "罗岩",
+      "registrar": "沈宁",
+      "transportTemp": 6.5,
+      "sealBroken": false,
+      "failReasons": [],
+      "status": "在途",
+      "activeReceipt": null,
+      "archive": [],
+      "createdAt": "2026-09-26T09:20:00.000Z",
+      "updatedAt": "2026-09-26T11:05:00.000Z",
+      "history": [
+        { "at": "2026-09-26T11:05:00.000Z", "action": "发运", "note": "罗岩 运输，冷链 6.5℃" },
+        { "at": "2026-09-26T09:20:00.000Z", "action": "登记", "note": "ZK-01 / L2 钙华层，深度3.4m" }
+      ]
+    },
+    {
+      "id": "sample-seed-2",
+      "sampleCode": "S-2026-002",
+      "borehole": "ZK-01",
+      "horizon": "L3 粉砂层",
+      "depth": 5.1,
+      "sealedAt": "2026-09-26T10:05",
+      "sealNo": "FB-3302",
+      "weight": 512,
+      "carrier": "罗岩",
+      "registrar": "沈宁",
+      "transportTemp": 9.2,
+      "sealBroken": false,
+      "failReasons": ["运输温度超过8℃"],
+      "status": "待处理",
+      "activeReceipt": null,
+      "archive": [],
+      "createdAt": "2026-09-26T10:05:00.000Z",
+      "updatedAt": "2026-09-26T12:40:00.000Z",
+      "history": [
+        { "at": "2026-09-26T12:40:00.000Z", "action": "转待处理", "note": "运输温度超过8℃" },
+        { "at": "2026-09-26T10:05:00.000Z", "action": "登记", "note": "ZK-01 / L3 粉砂层，深度5.1m" }
+      ]
+    },
+    {
+      "id": "sample-seed-3",
+      "sampleCode": "S-2026-003",
+      "borehole": "ZK-02",
+      "horizon": "L1 表土层",
+      "depth": 1.85,
+      "sealedAt": "2026-09-27T08:40",
+      "sealNo": "FB-3303",
+      "weight": 455,
+      "carrier": "罗岩",
+      "registrar": "沈宁",
+      "transportTemp": 5.8,
+      "sealBroken": false,
+      "failReasons": [],
+      "status": "待重核",
+      "activeReceipt": null,
+      "archive": [
+        {
+          "at": "2026-09-27T15:10:00.000Z",
+          "receiver": "贺征",
+          "receivedSealNo": "FB-3303",
+          "receivedWeight": 455,
+          "sealMatch": true,
+          "weightMatch": true,
+          "conclusion": "合格",
+          "revision": 1,
+          "valid": false,
+          "note": "封条号相符（FB-3303 / FB-3303）；重量相符（455g / 455g）",
+          "supersededAt": "2026-09-28T08:15:00.000Z",
+          "supersedeReason": "关键字段更正：深度 1.8m → 1.85m"
+        }
+      ],
+      "createdAt": "2026-09-27T08:40:00.000Z",
+      "updatedAt": "2026-09-28T08:15:00.000Z",
+      "history": [
+        { "at": "2026-09-28T08:15:00.000Z", "action": "关键字段更正，原结论失效重排", "note": "深度 1.8m → 1.85m" },
+        { "at": "2026-09-27T15:10:00.000Z", "action": "实验室接收合格", "note": "贺征 核对，封条号相符（FB-3303 / FB-3303）；重量相符（455g / 455g）" },
+        { "at": "2026-09-27T09:00:00.000Z", "action": "发运", "note": "罗岩 运输，冷链 5.8℃" },
+        { "at": "2026-09-27T08:40:00.000Z", "action": "登记", "note": "ZK-02 / L1 表土层，深度1.8m" }
+      ]
+    }
   ]
 }
