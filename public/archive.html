@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>接收与旧档 · 沉积层样本链</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div>
+        <h1>实验室接收与旧档</h1>
+        <p class="lede">另一人核对封条号与重量后记录的结论；被更正作废的结论保留可查。</p>
+      </div>
+      <nav class="mainnav" id="mainnav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel">
+      <div class="queue-head">
+        <h2>已接收样本</h2>
+        <input class="search" id="sampleSearch" placeholder="搜索样单号 / 钻孔 / 层位 / 接收人">
+      </div>
+      <div id="receivedList" class="card-list"></div>
+    </section>
+
+    <section class="panel archive-panel">
+      <div class="queue-head">
+        <h2>接收结论旧档</h2>
+        <div class="toolbar">
+          <input class="search" id="receiptSearch" placeholder="搜索样单号 / 接收人">
+          <select id="receiptFilter">
+            <option value="">全部结论（含作废）</option>
+            <option value="false">仅现行有效</option>
+            <option value="true">仅已作废</option>
+          </select>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="receipt-table">
+          <thead>
+            <tr><th>时间</th><th>样单号</th><th>接收人</th><th>封条号核对</th><th>重量核对</th><th>结论</th><th>状态/作废原因</th></tr>
+          </thead>
+          <tbody id="receiptRows"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="/lib/rules.js"></script>
+  <script src="/common.js"></script>
+  <script src="/sample-card.js"></script>
+  <script src="/archive.js"></script>
+</body>
+</html>

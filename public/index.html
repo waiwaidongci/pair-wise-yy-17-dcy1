@@ -3,24 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>业务系统</title>
+  <title>沉积层样本链 · 队列看板</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <div class="app-shell">
-    <header>
-      <div class="topline">
-        <div>
-          <h1 id="title">业务系统</h1>
-          <p class="lede" id="lede"></p>
-        </div>
-        <button class="secondary" id="refreshBtn">刷新数据</button>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div>
+        <h1>沉积层样本链</h1>
+        <p class="lede">封条 · 冷链 · 双人核对 —— 登记、在途、待处理、接收全链条留痕</p>
       </div>
-      <nav class="tabs" id="tabs"></nav>
-    </header>
-    <main id="main"></main>
-  </div>
+      <nav class="mainnav" id="mainnav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="stats" id="stats"></div>
+    <div class="queues">
+      <section class="queue queue-main">
+        <div class="queue-head">
+          <h2>在途 / 送检清单</h2>
+          <span class="queue-count" id="count-main">0</span>
+        </div>
+        <p class="queue-hint">在途样本完成运输核验后才进送检清单；待处理样本不在此列。</p>
+        <div id="list-main" class="card-list"></div>
+      </section>
+
+      <section class="queue queue-pending">
+        <div class="queue-head">
+          <h2>待处理</h2>
+          <span class="queue-count" id="count-pending">0</span>
+        </div>
+        <p class="queue-hint">运输超温（&gt;8℃）、封条破损、重量缺失或实验室判异，隔离在此等待处置复检。</p>
+        <div id="list-pending" class="card-list"></div>
+      </section>
+    </div>
+  </main>
+
   <div class="toast" id="toast"></div>
-  <script src="/app.js"></script>
+  <script src="/lib/rules.js"></script>
+  <script src="/common.js"></script>
+  <script src="/board.js"></script>
 </body>
 </html>

@@ -1,43 +1,278 @@
 {
-  "sites": [
+  "samples": [
     {
-      "id": "site-seed-1",
-      "cave": "北麓三号洞",
-      "zone": "滴水帘区",
-      "pointCode": "D-07",
-      "route": "西线巡测",
-      "sensitivity": "高",
-      "protectedStatus": "重点保护",
-      "baselineTemp": 16.2,
-      "baselineHumidity": 92,
-      "baselineCo2": 680,
-      "note": "游客步道上方，滴水频率稳定",
-      "createdAt": "2026-06-14T08:00:00.000Z",
-      "updatedAt": "2026-06-14T08:00:00.000Z",
+      "id": "smp-demo-1",
+      "code": "ZK-03-L2-001",
+      "borehole": "ZK-03",
+      "horizon": "L2",
+      "depthM": 1.8,
+      "weightG": 820,
+      "sealNo": "F-20260927-014",
+      "sealedAt": "2026-09-27T02:10:00.000Z",
+      "registrar": "周岚",
+      "status": "intransit",
+      "lastQc": null,
+      "receiptId": null,
+      "note": "钙华碎屑层，浅色条带",
+      "createdAt": "2026-09-27T02:10:00.000Z",
+      "updatedAt": "2026-09-27T02:10:00.000Z",
       "history": [
-        { "at": "2026-06-14T08:00:00.000Z", "action": "创建", "note": "样点建档" }
+        {
+          "at": "2026-09-27T02:10:00.000Z",
+          "action": "登记封样",
+          "operator": "周岚",
+          "note": "钻孔 ZK-03 / 层位 L2 / 深度 1.8m，封条 F-20260927-014"
+        }
+      ]
+    },
+    {
+      "id": "smp-demo-2",
+      "code": "ZK-03-L3-002",
+      "borehole": "ZK-03",
+      "horizon": "L3",
+      "depthM": 2.6,
+      "weightG": 760.5,
+      "sealNo": "F-20260927-021",
+      "sealedAt": "2026-09-27T02:40:00.000Z",
+      "registrar": "周岚",
+      "status": "submitted",
+      "lastQc": {
+        "at": "2026-09-27T06:05:00.000Z",
+        "checker": "高岩",
+        "maxTemp": 6.8,
+        "sealIntact": true,
+        "passed": true,
+        "reasons": []
+      },
+      "receiptId": null,
+      "note": "粉砂层与钙板互层",
+      "createdAt": "2026-09-27T02:40:00.000Z",
+      "updatedAt": "2026-09-27T06:05:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-27T02:40:00.000Z",
+          "action": "登记封样",
+          "operator": "周岚",
+          "note": "钻孔 ZK-03 / 层位 L3 / 深度 2.6m，封条 F-20260927-021"
+        },
+        {
+          "at": "2026-09-27T06:05:00.000Z",
+          "action": "运输核验",
+          "operator": "高岩",
+          "note": "最高温 6.8℃、封条完好，进入送检清单"
+        }
+      ]
+    },
+    {
+      "id": "smp-demo-3",
+      "code": "ZK-03-L4-003",
+      "borehole": "ZK-03",
+      "horizon": "L4",
+      "depthM": 3.4,
+      "weightG": 690.2,
+      "sealNo": "F-20260927-022",
+      "sealedAt": "2026-09-27T03:05:00.000Z",
+      "registrar": "周岚",
+      "status": "pending",
+      "lastQc": {
+        "at": "2026-09-27T06:20:00.000Z",
+        "checker": "高岩",
+        "maxTemp": 9.6,
+        "sealIntact": true,
+        "passed": false,
+        "reasons": [
+          "TEMP_EXCEEDED"
+        ]
+      },
+      "receiptId": null,
+      "note": "黏土含量升高，冷链途中车厢制冷短暂停机",
+      "createdAt": "2026-09-27T03:05:00.000Z",
+      "updatedAt": "2026-09-27T06:20:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-27T03:05:00.000Z",
+          "action": "登记封样",
+          "operator": "周岚",
+          "note": "钻孔 ZK-03 / 层位 L4 / 深度 3.4m，封条 F-20260927-022"
+        },
+        {
+          "at": "2026-09-27T06:20:00.000Z",
+          "action": "运输核验",
+          "operator": "高岩",
+          "note": "判异：运输超温（>8℃），转待处理"
+        }
+      ]
+    },
+    {
+      "id": "smp-demo-4",
+      "code": "ZK-03-L7-004",
+      "borehole": "ZK-03",
+      "horizon": "L7",
+      "depthM": null,
+      "weightG": null,
+      "sealNo": "F-20260927-026",
+      "sealedAt": "2026-09-27T03:30:00.000Z",
+      "registrar": "秦越",
+      "status": "pending",
+      "lastQc": {
+        "at": "2026-09-27T06:40:00.000Z",
+        "checker": "高岩",
+        "maxTemp": 5.9,
+        "sealIntact": false,
+        "passed": false,
+        "reasons": [
+          "SEAL_BROKEN",
+          "WEIGHT_MISSING"
+        ]
+      },
+      "receiptId": null,
+      "note": "箱底样本，取出时封条已裂开，现场未称重",
+      "createdAt": "2026-09-27T03:30:00.000Z",
+      "updatedAt": "2026-09-27T06:40:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-27T03:30:00.000Z",
+          "action": "登记封样",
+          "operator": "秦越",
+          "note": "钻孔 ZK-03 / 层位 L7，封条 F-20260927-026（重量待补）"
+        },
+        {
+          "at": "2026-09-27T06:40:00.000Z",
+          "action": "运输核验",
+          "operator": "高岩",
+          "note": "判异：封条破损；重量缺失，转待处理"
+        }
+      ]
+    },
+    {
+      "id": "smp-demo-5",
+      "code": "ZK-02-L5-005",
+      "borehole": "ZK-02",
+      "horizon": "L5",
+      "depthM": 4.1,
+      "weightG": 905,
+      "sealNo": "F-20260926-031",
+      "sealedAt": "2026-09-26T01:55:00.000Z",
+      "registrar": "周岚",
+      "status": "received",
+      "lastQc": {
+        "at": "2026-09-26T05:30:00.000Z",
+        "checker": "高岩",
+        "maxTemp": 6.2,
+        "sealIntact": true,
+        "passed": true,
+        "reasons": []
+      },
+      "receiptId": "rcp-demo-1",
+      "note": "钙板夹层，保存状态完好",
+      "createdAt": "2026-09-26T01:55:00.000Z",
+      "updatedAt": "2026-09-26T08:10:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-26T01:55:00.000Z",
+          "action": "登记封样",
+          "operator": "周岚",
+          "note": "钻孔 ZK-02 / 层位 L5 / 深度 4.1m，封条 F-20260926-031"
+        },
+        {
+          "at": "2026-09-26T05:30:00.000Z",
+          "action": "运输核验",
+          "operator": "高岩",
+          "note": "最高温 6.2℃、封条完好，进入送检清单"
+        },
+        {
+          "at": "2026-09-26T08:10:00.000Z",
+          "action": "实验室接收",
+          "operator": "林澈",
+          "note": "封条号、重量核对一致，结论：接收"
+        }
+      ]
+    },
+    {
+      "id": "smp-demo-6",
+      "code": "ZK-02-L6-006",
+      "borehole": "ZK-02",
+      "horizon": "L6",
+      "depthM": 5.2,
+      "weightG": 845,
+      "sealNo": "F-20260926-038",
+      "sealedAt": "2026-09-26T02:20:00.000Z",
+      "registrar": "周岚",
+      "status": "submitted",
+      "lastQc": {
+        "at": "2026-09-26T05:50:00.000Z",
+        "checker": "高岩",
+        "maxTemp": 6.5,
+        "sealIntact": true,
+        "passed": true,
+        "reasons": []
+      },
+      "receiptId": null,
+      "note": "深度据钻孔柱状图更正，等待重新接收核对",
+      "createdAt": "2026-09-26T02:20:00.000Z",
+      "updatedAt": "2026-09-27T01:15:00.000Z",
+      "history": [
+        {
+          "at": "2026-09-26T02:20:00.000Z",
+          "action": "登记封样",
+          "operator": "周岚",
+          "note": "钻孔 ZK-02 / 层位 L6 / 深度 5m，封条 F-20260926-038"
+        },
+        {
+          "at": "2026-09-26T05:50:00.000Z",
+          "action": "运输核验",
+          "operator": "高岩",
+          "note": "最高温 6.5℃、封条完好，进入送检清单"
+        },
+        {
+          "at": "2026-09-26T08:30:00.000Z",
+          "action": "实验室接收",
+          "operator": "林澈",
+          "note": "封条号、重量核对一致，结论：接收"
+        },
+        {
+          "at": "2026-09-27T01:15:00.000Z",
+          "action": "关键字段更正",
+          "operator": "秦越",
+          "note": "深度 → 5.2m；原因：核对钻孔柱状图发现深度记录少 0.2m；原接收结论已作废，重新进入送检清单"
+        }
       ]
     }
   ],
-  "surveys": [
+  "receipts": [
     {
-      "id": "survey-seed-1",
-      "siteId": "site-seed-1",
-      "surveyor": "沈宁",
-      "date": "2026-06-18",
-      "temperature": 17.4,
-      "humidity": 88,
-      "co2": 920,
-      "dripRate": 12,
-      "disturbance": "栏杆外侧有触碰痕迹",
-      "photoUrl": "",
-      "status": "异常待复查",
-      "reviewNote": "",
-      "createdAt": "2026-06-18T10:00:00.000Z",
-      "updatedAt": "2026-06-18T10:00:00.000Z",
-      "history": [
-        { "at": "2026-06-18T10:00:00.000Z", "action": "创建", "note": "CO2升高并有干扰痕迹" }
-      ]
+      "id": "rcp-demo-1",
+      "sampleId": "smp-demo-5",
+      "sampleCode": "ZK-02-L5-005",
+      "receiver": "林澈",
+      "sealNoExpected": "F-20260926-031",
+      "sealNoObserved": "F-20260926-031",
+      "weightExpectedG": 905,
+      "weightObservedG": 905,
+      "weightDiffG": 0,
+      "conclusion": "accepted",
+      "discrepancies": [],
+      "note": "",
+      "void": false,
+      "createdAt": "2026-09-26T08:10:00.000Z"
+    },
+    {
+      "id": "rcp-demo-2",
+      "sampleId": "smp-demo-6",
+      "sampleCode": "ZK-02-L6-006",
+      "receiver": "林澈",
+      "sealNoExpected": "F-20260926-038",
+      "sealNoObserved": "F-20260926-038",
+      "weightExpectedG": 845,
+      "weightObservedG": 845,
+      "weightDiffG": 0,
+      "conclusion": "accepted",
+      "discrepancies": [],
+      "note": "首次接收结论",
+      "void": true,
+      "voidedAt": "2026-09-27T01:15:00.000Z",
+      "voidReason": "核对钻孔柱状图发现深度记录少 0.2m",
+      "createdAt": "2026-09-26T08:30:00.000Z"
     }
   ]
 }

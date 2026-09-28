@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>登记钻孔 · 沉积层样本链</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <div>
+        <h1>登记钻孔与封样</h1>
+        <p class="lede">登记钻孔、层位、深度与封存时间；同钻孔同层位只准一条在途样本。</p>
+      </div>
+      <nav class="mainnav" id="mainnav"></nav>
+    </div>
+  </header>
+
+  <main class="wrap grid-2col">
+    <form class="panel" id="registerForm">
+      <h2>新样登记</h2>
+      <div class="form-row">
+        <label>钻孔编号<input name="borehole" required placeholder="如 ZK-03"></label>
+        <label>层位<input name="horizon" required placeholder="如 L2"></label>
+      </div>
+      <div class="form-row">
+        <label>深度 m<input name="depthM" type="number" step="0.01" min="0" required placeholder="如 1.8"></label>
+        <label>样本重量 g<input name="weightG" type="number" step="0.1" min="0" placeholder="现场未称重可留空，将进待处理"></label>
+      </div>
+      <div class="form-row">
+        <label>封条号<input name="sealNo" required placeholder="如 F-20260927-014"></label>
+        <label>封存时间<input name="sealedAt" type="datetime-local" step="60" required></label>
+      </div>
+      <div class="form-row">
+        <label>登记/封存人<input name="registrar" required placeholder="谁封的样由谁登记"></label>
+      </div>
+      <label class="full">备注<textarea name="note" rows="2" placeholder="岩性、异常情况等（选填）"></textarea></label>
+      <p class="form-hint">重量缺失的样本运输核验时会自动转待处理；封存时间默认取当前时刻，可按现场时间修正。</p>
+      <div class="form-actions"><button class="btn primary">登记封样</button><button type="reset" class="btn ghost">清空</button></div>
+    </form>
+
+    <section class="panel">
+      <h2>登记结果</h2>
+      <div id="result" class="register-result">
+        <div class="empty">登记成功后在此显示样单；若同层位已有在途样本，将直接返回已有样单。</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="/lib/rules.js"></script>
+  <script src="/common.js"></script>
+  <script src="/register.js"></script>
+</body>
+</html>
